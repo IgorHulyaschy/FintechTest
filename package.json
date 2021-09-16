@@ -1,0 +1,43 @@
+{
+  "name": "fintech",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.ts",
+  "scripts": {
+    "serve": "nodemon ./src/server.ts",
+    "start": "node ./src/server.ts",
+    "eslint": "eslint --init",
+    "eslint:fix": "eslint --fix --ext .ts ",
+    "tsc": "tsc --init",
+    "build": "tsc",
+    "up": "ts-node ./node_modules/typeorm/cli.js migration:run"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/config": "0.0.39",
+    "@types/koa": "^2.13.4",
+    "@types/koa-joi-router": "^8.0.2",
+    "@types/node": "^16.9.1",
+    "@types/pg": "^8.6.1",
+    "@typescript-eslint/eslint-plugin": "^4.31.1",
+    "@typescript-eslint/parser": "^4.31.1",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.24.2",
+    "nodemon": "^2.0.12"
+  },
+  "dependencies": {
+    "config": "^3.3.6",
+    "dotenv": "^10.0.0",
+    "koa": "^2.13.1",
+    "koa-body": "^4.2.0",
+    "koa-joi-router": "^8.0.0",
+    "koa-router": "^10.1.1",
+    "pg": "^8.7.1",
+    "reflect-metadata": "^0.1.13",
+    "ts-node": "^10.2.1",
+    "typeorm": "^0.2.37",
+    "typescript": "^4.4.3"
+  }
+}
