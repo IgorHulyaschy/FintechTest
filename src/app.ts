@@ -5,8 +5,9 @@ import { createConnection } from 'typeorm';
 
 import toDoRouter from './todo/router';
 import config from '../ormconfig';
-export interface AppContext extends Context {}
+import errorCatcher from './middlewares/errorCatcher';
 
+export interface AppContext extends Context {}
 
 const app = new Koa();
 try{
@@ -15,11 +16,13 @@ try{
 } catch (err) {
   console.log(err);
 }
+app.use(errorCatcher);
 const router = new Router();
+
 app.use(bodyParser());
+
 
 router.use(toDoRouter.middleware());
 app.use(router.middleware());
-
 
 export default app;
