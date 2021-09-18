@@ -7,7 +7,7 @@ export class Validator {
     validate: {
       type: "json",
       body: {
-        task: joi.string().min(3).max(4000).required(),
+        task: joi.string().min(3).max(400).required(),
       },
     }
   }
@@ -17,7 +17,7 @@ export class Validator {
       type: "json",
       body: {
         id: joi.number().min(1).required(),
-        task: joi.string().min(3).max(4000).required(),
+        task: joi.string().min(3).max(400).required(),
       },
     }
   }
