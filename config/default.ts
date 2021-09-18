@@ -11,7 +11,4 @@ module.exports = {
     port: Number(process.env.DB_PORT),
     dbName: process.env.DB_NAME,
   },
-  redis: {
-    port: Number(process.env.REDIS_PORT),
-  },
 };
